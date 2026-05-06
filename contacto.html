@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Eli Luna</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none;">
+                    <span class="logo-vino">Eli</span><span class="logo-dorado">Luna</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="conoceme.html">Conóceme</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-interno" style="background-color: var(--color-vino); padding: 60px 0; color: white; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 2.5rem; margin-bottom: 10px;">Atención Ciudadana</h1>
+            <p style="color: var(--color-dorado); text-transform: uppercase; letter-spacing: 2px;">Oficina de puertas abiertas</p>
+        </div>
+    </section>
+
+    <section class="contacto" style="padding: 80px 0; background-color: var(--color-fondo);">
+        <div class="container" style="display: flex; flex-wrap: wrap; gap: 50px;">
+            
+            <div class="form-container" style="flex: 1; min-width: 300px; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <h2 class="seccion-titulo" style="margin-bottom: 30px; text-align: left;">Escríbeme</h2>
+                <form action="#" method="POST" class="formulario-contacto">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contacto">Teléfono o Correo</label>
+                        <input type="text" id="contacto" name="contacto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="asunto">Asunto / Petición</label>
+                        <input type="text" id="asunto" name="asunto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje detallado</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-principal" style="width: 100%; text-align: center; border: none; cursor: pointer;">Enviar Mensaje</button>
+                </form>
+            </div>
+
+            <div class="info-container" style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center;">
+                <h2 style="color: var(--color-vino); margin-bottom: 25px; font-size: 1.8rem;">Acércate y construyamos juntos</h2>
+                
+                <div class="info-item" style="margin-bottom: 20px;">
+                    <h3 style="color: var(--color-dorado); font-size: 1rem; text-transform: uppercase; margin-bottom: 5px;">Ubicación</h3>
+                    <p style="color: #555;">Centro de Atención Municipal, Hacienda Jesús María<br>Edificio de regidores y regidoras<br>Carretera Estatal 210, #6301</p>
+                </div>
+
+                <div class="info-item" style="margin-bottom: 20px;">
+                    <h3 style="color: var(--color-dorado); font-size: 1rem; text-transform: uppercase; margin-bottom: 5px;">Teléfono</h3>
+                    <p style="color: #555;">(442) 614 1762</p>
+                </div>
+
+                <div class="info-item" style="margin-bottom: 30px;">
+                    <h3 style="color: var(--color-dorado); font-size: 1rem; text-transform: uppercase; margin-bottom: 5px;">Redes Sociales</h3>
+                    <p style="color: #555;">
+                        <strong>Facebook:</strong> Judith Elizabeth Sánchez Luna<br>
+                        <strong>Instagram:</strong> @elizabeth_luna.s
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Eli Luna, Regidora. Identidad, Cultura y Compromiso.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
