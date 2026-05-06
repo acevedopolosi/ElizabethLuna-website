@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eli Luna | Regidora de El Marqués</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="navbar">
         <div class="container nav-container">
             <div class="logo">
-                <span class="logo-vino">Eli</span><span class="logo-dorado">Luna</span>
+                <a href="index.html">
+                    <span class="logo-vino">Eli</span><span class="logo-dorado">Luna</span>
+                </a>
             </div>
             <nav>
                 <ul class="nav-links">
@@ -27,14 +31,16 @@
     <section class="hero">
         <div class="container hero-container">
             <div class="hero-text">
-                <h2 class="subtitle">Ele Luna, Regidora</h2>
+                <h2 class="subtitle">Regidora de El Marqués</h2>
                 <div class="divisor-dorado"></div>
                 <h1 class="title">Identidad, Cultura <br>y Compromiso</h1>
-                <p>Preservando raíces y construyendo un mañana para El Marqués.</p>
-                <a href="conoceme.html" class="btn-principal">Conoce mi trabajo</a>
+                <p>Preservando nuestras raíces y construyendo un bienestar compartido para todas las familias de nuestro municipio.</p>
+                <a href="conoceme.html" class="btn-principal">Conoce mi trayectoria</a>
             </div>
             <div class="hero-image">
-                <img src="img/hero-eli.jpg" alt="Regidora Eli Luna en oficina">
+                <div class="image-frame">
+                    <img src="img/hero-eli.jpg" alt="Regidora Eli Luna">
+                </div>
             </div>
         </div>
     </section>
@@ -44,19 +50,25 @@
             <h2 class="seccion-titulo">Ejes de Acción</h2>
             <div class="ejes-grid">
                 <div class="card-eje">
-                    <img src="img/icono-educacion.svg" alt="Educación" class="icono-eje">
+                    <div class="icono-wrapper">
+                        <img src="img/icono-educacion.svg" alt="Educación" class="icono-eje">
+                    </div>
                     <h3>Educación</h3>
-                    <p>Impulso a becas, infraestructura escolar y vinculación académica.</p>
+                    <p>Impulso a becas, mejoramiento de infraestructura escolar y vinculación académica para nuestros jóvenes.</p>
                 </div>
                 <div class="card-eje">
-                    <img src="img/icono-bienestar.svg" alt="Bienestar Social" class="icono-eje">
+                    <div class="icono-wrapper">
+                        <img src="img/icono-bienestar.svg" alt="Bienestar Social" class="icono-eje">
+                    </div>
                     <h3>Bienestar Social</h3>
-                    <p>Programas de apoyo a la vivienda, desarrollo infantil y salud.</p>
+                    <p>Gestión permanente de programas de apoyo a la vivienda, desarrollo infantil y salud comunitaria.</p>
                 </div>
                 <div class="card-eje">
-                    <img src="img/icono-cultura.svg" alt="Cultura" class="icono-eje">
-                    <h3>Defensa de la Cultura</h3>
-                    <p>Protección de zonas naturales y rescate de nuestras tradiciones.</p>
+                    <div class="icono-wrapper">
+                        <img src="img/icono-cultura.svg" alt="Cultura" class="icono-eje">
+                    </div>
+                    <h3>Defensa Cultural</h3>
+                    <p>Protección firme de nuestras zonas naturales y rescate de las tradiciones que nos dan identidad.</p>
                 </div>
             </div>
         </div>
@@ -64,20 +76,24 @@
 
     <section class="actividad">
         <div class="container">
-            <h2 class="seccion-titulo">El Día a Día en Comunidad</h2>
-            <p class="seccion-desc">Acompáñame en los recorridos, tequios y gestiones por nuestro municipio.</p>
+            <div class="actividad-header">
+                <h2 class="seccion-titulo">Cercanía y Territorio</h2>
+                <p class="seccion-desc">Acompáñame en el día a día. El trabajo por nuestro municipio se hace en las calles, escuchando y gestionando de la mano con los ciudadanos.</p>
+            </div>
             
             <div class="fb-widget-container">
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F[SU_USUARIO]&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FEliSanLuna&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden; max-width: 100%; border-radius: 4px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container footer-content">
-            <p>&copy; 2026 Eli Luna, Regidora. El Marqués, Qro.</p>
+            <div class="logo footer-logo">
+                <span class="logo-blanco">Eli</span><span class="logo-dorado">Luna</span>
+            </div>
+            <p>&copy; 2026 Judith Elizabeth Sánchez Luna. Regidora de El Marqués, Qro.</p>
         </div>
     </footer>
 
 </body>
-</html>
