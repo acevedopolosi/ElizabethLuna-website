@@ -1,337 +1,407 @@
-/* =========================================
-   VARIABLES DE COLOR Y FUENTES
-   ========================================= */
+/* Variables de Color Institucional */
 :root {
-    --color-vino: #7A1B39; 
-    --color-vino-oscuro: #4A0E21; 
-    --color-dorado: #C19A6B; 
+    --color-vino: #782C38; /* Tono vino de la marca */
+    --color-vino-oscuro: #5C1F28;
+    --color-dorado: #F5D492; /* Tono del texto y botones */
+    --color-dorado-hover: #e3c17d;
     --color-blanco: #FFFFFF;
-    --color-fondo: #FDFBFB;
     --color-texto: #333333;
-    --color-texto-claro: #666666;
-    
-    --fuente-titulos: 'Playfair Display', serif;
-    --fuente-textos: 'Inter', sans-serif;
+    --color-fondo-form: #FAFAFA;
+    --fuente-principal: 'Montserrat', sans-serif;
+    --fuente-cursiva: 'Great Vibes', cursive;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    font-family: var(--fuente-textos);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+    font-family: var(--fuente-principal);
+    background-color: var(--color-vino); /* Base del sitio */
+    color: var(--color-blanco);
+    overflow-x: hidden;
 }
 
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-
-/* =========================================
-   NAVEGACIÓN
-   ========================================= */
+/* --- Navegación --- */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--color-vino-oscuro);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
-.nav-container { display: flex; justify-content: space-between; align-items: center; height: 85px; }
-
-.logo a {
-    text-decoration: none;
-    font-family: var(--fuente-titulos);
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 1px;
+.logo-nav img {
+    height: 40px;
+    object-fit: contain;
 }
 
-.logo-vino { color: var(--color-vino); }
-.logo-dorado { color: var(--color-dorado); }
-.logo-blanco { color: var(--color-blanco); }
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
 
-.nav-links { list-style: none; display: flex; gap: 35px; }
 .nav-links a {
-    text-decoration: none;
-    color: var(--color-texto);
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    position: relative;
-    transition: color 0.3s;
-}
-.nav-links a:hover, .nav-links a.active { color: var(--color-vino); }
-
-/* =========================================
-   HERO SECTION 
-   ========================================= */
-.hero {
-    /* CORRECCIÓN: FondoEli.png */
-    background-image: 
-        linear-gradient(90deg, rgba(122, 27, 57, 0.9) 0%, rgba(122, 27, 57, 0.75) 100%),
-        url('img/FondoEli.png');
-    background-size: cover;
-    background-position: center;
-    padding-top: 80px; 
-    overflow: hidden; 
     color: var(--color-blanco);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-.hero-container {
+.nav-links a:hover, .nav-links a.active {
+    color: var(--color-dorado);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    position: relative;
+    height: 85vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    min-height: 500px;
+    overflow: hidden;
 }
 
-.hero-text { flex: 1; padding-bottom: 80px; }
-
-.subtitle {
-    color: var(--color-dorado);
-    font-family: var(--fuente-textos);
-    font-size: 0.95rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
 }
 
-.divisor-dorado { height: 2px; width: 60px; background-color: var(--color-dorado); margin-bottom: 30px; }
-
-.title {
-    color: var(--color-blanco); 
-    font-family: var(--fuente-titulos);
-    font-size: 4rem;
-    line-height: 1.1;
-    margin-bottom: 25px;
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 0 5%;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.hero-text p {
-    color: #EED; 
-    font-size: 1.15rem;
-    margin-bottom: 40px;
-    max-width: 480px;
+.hero-text {
+    max-width: 50%;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
 }
 
-.btn-principal {
+.hero-logo-large {
+    max-width: 400px;
+    width: 100%;
+}
+
+.hero-text h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.btn-dorado {
     display: inline-block;
     background-color: var(--color-dorado);
     color: var(--color-vino-oscuro);
-    padding: 16px 36px;
+    padding: 10px 30px;
+    border-radius: 25px;
     text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
-.btn-principal:hover {
-    background-color: var(--color-blanco);
-    color: var(--color-vino);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+.btn-dorado:hover {
+    background-color: var(--color-dorado-hover);
 }
 
-.hero-image-transparente {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-self: flex-end; 
+.hero-image {
+    position: absolute;
+    bottom: -10px;
+    left: 5%;
+    z-index: 3;
+    height: 90%;
 }
 
-.hero-image-transparente img {
-    max-width: 100%;
-    max-height: 600px;
+.hero-image img {
+    height: 100%;
     object-fit: contain;
-    display: block;
-    filter: drop-shadow(-10px 10px 20px rgba(0,0,0,0.3)); 
 }
 
-/* =========================================
-   STATEMENT (Fondo Collage)
-   ========================================= */
-.statement {
-    /* CORRECCIÓN: FondoElis.png */
-    background-image: 
-        linear-gradient(rgba(45, 10, 20, 0.85), rgba(45, 10, 20, 0.85)),
-        url('img/FondoElis.png');
+/* --- Sección Frase (Conóceme) --- */
+.quote-section {
+    position: relative;
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.quote-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; 
-    padding: 100px 0;
+    background-attachment: fixed; /* Efecto parallax opcional */
+    z-index: 1;
+}
+
+.quote-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.quote-content p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* --- Sección Redes Sociales --- */
+.social-feed-section {
+    background-color: var(--color-vino);
+    padding: 4rem 5%;
     text-align: center;
-    color: var(--color-blanco);
 }
 
-.statement-container { max-width: 900px; margin: 0 auto; }
-
-.statement-text {
-    font-family: var(--fuente-titulos);
-    font-size: 2.2rem;
-    font-weight: 400;
-    font-style: italic;
-    line-height: 1.5;
-    margin-bottom: 40px;
-}
-
-.divisor-dorado-centro { height: 2px; width: 80px; background-color: var(--color-dorado); margin: 0 auto 20px auto; }
-
-.statement-firma {
-    font-family: var(--fuente-textos);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 0.9rem;
-    color: var(--color-dorado);
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
     font-weight: 600;
 }
 
-/* =========================================
-   EJES DE ACCIÓN Y RESTO
-   ========================================= */
-.ejes { padding: 100px 0; }
-.seccion-titulo-oscura {
-    color: var(--color-vino);
-    font-family: var(--fuente-titulos);
-    font-size: 2.8rem;
-    text-align: center;
-    margin-bottom: 70px;
-}
-
-.ejes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-
-.card-eje {
-    background: var(--color-blanco);
-    padding: 50px 40px;
-    border-radius: 4px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-    border-top: 3px solid transparent;
-    transition: all 0.4s ease;
-}
-
-.card-eje:hover { transform: translateY(-8px); border-top: 3px solid var(--color-dorado); box-shadow: 0 20px 40px rgba(122, 27, 57, 0.08); }
-
-.icono-wrapper {
-    width: 70px; height: 70px; margin: 0 auto 25px auto;
-    background-color: rgba(193, 154, 107, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;
-}
-.icono-eje { width: 35px; height: 35px; }
-
-.card-eje h3 { color: var(--color-vino); font-family: var(--fuente-titulos); font-size: 1.6rem; margin-bottom: 15px; }
-.card-eje p { color: var(--color-texto-claro); font-size: 0.95rem; }
-
-/* =========================================
-   ACTIVIDAD RECIENTE (Facebook)
-   ========================================= */
-.actividad { padding: 80px 0; background-color: var(--color-fondo); border-bottom: 1px solid rgba(193, 154, 107, 0.2); }
-.actividad-header { text-align: center; max-width: 600px; margin: 0 auto 50px auto; }
-.seccion-desc { color: var(--color-texto-claro); font-size: 1.1rem; }
-.fb-widget-container { display: flex; justify-content: center; max-width: 400px; margin: 0 auto; }
-
-/* =========================================
-   FORMULARIO DE CONTACTO INICIO
-   ========================================= */
-.contacto-inicio {
-    padding: 100px 0;
-    background-color: var(--color-blanco);
-}
-
-.contacto-wrapper {
-    max-width: 700px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 50px;
-    border-radius: 8px;
-    box-shadow: 0 15px 40px rgba(122, 27, 57, 0.05);
-    border-top: 4px solid var(--color-dorado);
-    text-align: center;
-}
-
-.formulario-marca {
-    text-align: left;
-    margin-top: 30px;
-}
-
-.form-row {
+.feed-container {
     display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.feed-box {
+    background-color: var(--color-blanco);
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+.feed-placeholder {
+    color: var(--color-texto);
+    text-align: center;
+    padding: 2rem;
+}
+
+/* --- Sección Contacto --- */
+.contact-section {
+    background-color: var(--color-vino);
+    padding: 4rem 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.cursive-title {
+    font-family: var(--fuente-cursiva);
+    color: var(--color-dorado);
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    font-weight: normal;
+}
+
+.contact-details {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    display: inline-block;
+    backdrop-filter: blur(5px);
+}
+
+.contact-details p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-details p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-details i {
+    color: var(--color-dorado);
+    font-size: 1.3rem;
+}
+
+.contact-foto {
+    position: absolute;
+    bottom: -150px;
+    left: -10%;
+    height: 450px;
+    z-index: 0;
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--color-blanco);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 2;
 }
 
 .form-group {
-    flex: 1;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
 }
 
-.formulario-marca label {
+.form-group label {
     display: block;
-    margin-bottom: 8px;
-    color: var(--color-vino);
+    color: var(--color-texto);
     font-weight: 600;
+    margin-bottom: 0.5rem;
     font-size: 0.9rem;
 }
 
-.formulario-marca input,
-.formulario-marca textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
-    padding: 14px;
-    border: 1px solid #E5E5E5;
-    border-radius: 4px;
-    font-family: var(--fuente-textos);
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: var(--fuente-principal);
     font-size: 1rem;
-    background-color: var(--color-fondo);
-    transition: all 0.3s ease;
+    background-color: var(--color-fondo-form);
+    transition: border-color 0.3s;
 }
 
-.formulario-marca input:focus,
-.formulario-marca textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
     outline: none;
-    border-color: var(--color-dorado);
-    box-shadow: 0 0 0 3px rgba(193, 154, 107, 0.15);
+    border-color: var(--color-vino);
 }
 
-.btn-form {
+.btn-vino {
     width: 100%;
-    margin-top: 10px;
-    background-color: var(--color-vino);
+    background-color: var(--color-vino); /* Reemplazamos el verde */
     color: var(--color-blanco);
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.btn-form:hover {
+.btn-vino:hover {
     background-color: var(--color-vino-oscuro);
+}
+
+/* --- Footer Universal --- */
+.site-footer {
+    background-color: #4A1921; /* Un vino más oscuro para diferenciar */
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.footer-socials a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
     color: var(--color-dorado);
 }
 
-/* =========================================
-   FOOTER
-   ========================================= */
-footer { background-color: var(--color-vino-oscuro); color: var(--color-blanco); padding: 60px 0 40px 0; text-align: center; }
-.footer-logo { margin-bottom: 20px; }
-footer p { color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; letter-spacing: 1px; }
-
-/* =========================================
-   RESPONSIVO
-   ========================================= */
-@media (max-width: 992px) {
-    .hero-container { flex-direction: column; text-align: center; gap: 0; }
-    .hero-text { padding-bottom: 0; padding-top: 40px; }
-    .divisor-dorado { margin: 0 auto 25px auto; }
-    .hero-text p { margin: 0 auto 35px auto; }
-    .hero-image-transparente img { max-height: 450px; margin-top: 40px; }
-    .statement-text { font-size: 1.6rem; }
-    
-    .form-row { flex-direction: column; gap: 0; }
-}
-
+/* --- Responsividad Básica --- */
 @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .title { font-size: 2.8rem; }
-    .contacto-wrapper { padding: 30px 20px; }
+    .nav-links {
+        display: none; /* Aquí puedes implementar un menú hamburguesa luego */
+    }
+    
+    .hero-section {
+        flex-direction: column;
+        height: auto;
+        padding-top: 2rem;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    .hero-image {
+        position: relative;
+        left: 0;
+        height: 400px;
+    }
+
+    .quote-content p {
+        font-size: 1.1rem;
+    }
+    
+    .cursive-title {
+        font-size: 3rem;
+    }
+
+    .contact-foto {
+        display: none; /* Ocultamos la foto en móviles para que no estorbe al texto */
+    }
 }
