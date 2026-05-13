@@ -3,131 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eli Luna | Regidora de El Marqués</title>
+    <title>Eli Luna | Regidora en El Marqués</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <a href="index.html">
-                    <span class="logo-vino">Eli</span><span class="logo-dorado">Luna</span>
-                </a>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="logo-nav">
+            <img src="NombreEli.png" alt="Eli Luna Logotipo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio" class="active">Inicio</a></li>
+            <li><a href="#conoceme">Conóceme</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección Inicio (Hero) -->
+    <header id="inicio" class="hero-section">
+        <!-- Fondo de la sección -->
+        <div class="hero-bg" style="background-image: url('FondoEli.png');"></div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <img src="NombreEli.png" alt="Eli Luna" class="hero-logo-large">
+                <h2>Regidora en El Marqués 2024 - 2027</h2>
+                <a href="#conoceme" class="btn-dorado">Conóceme</a>
             </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Inicio</a></li>
-                    <li><a href="conoceme.html">Conóceme</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
+        </div>
+        <div class="hero-image">
+            <img src="FotoEli.png" alt="Eli Luna Regidora">
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container hero-container">
-            <div class="hero-text">
-                <h2 class="subtitle">Regidora de El Marqués</h2>
-                <div class="divisor-dorado"></div>
-                <h1 class="title">Identidad, Cultura <br>y Compromiso</h1>
-                <p>Preservando nuestras raíces y construyendo un bienestar compartido para todas las familias de nuestro municipio.</p>
-                <a href="conoceme.html" class="btn-principal">Conoce mi trayectoria</a>
-            </div>
-            <div class="hero-image-transparente">
-                <img src="img/image_1c49d3.png" alt="Ele Luna Regidora">
-            </div>
+    <!-- Sección Frase / Trayectoria -->
+    <section id="conoceme" class="quote-section">
+        <!-- Máscara de color sobre la imagen original FondoElis.png -->
+        <div class="quote-bg" style="background-image: linear-gradient(rgba(120, 44, 56, 0.85), rgba(120, 44, 56, 0.85)), url('FondoElis.png');"></div>
+        <div class="quote-content">
+            <p>"Hay compromisos que no nacen en los tiempos políticos, sino en el amor profundo por nuestra tierra. Desde hace años iniciamos una lucha desde abajo por la justicia y el desarrollo de nuestras familias, forjando un camino que me llevó a fundar Morena y presidir su primer Comité Ejecutivo Municipal en El Marqués. Hoy, desde la Regiduría, mi brújula no cambia: sigo caminando con la misma congruencia, defendiendo las raíces y el futuro de nuestra comunidad."</p>
         </div>
     </section>
 
-    <section class="statement">
-        <div class="container statement-container">
-            <h2 class="statement-text">
-                "La transformación de El Marqués no es una bandera de ocasión, es el trabajo de toda una vida. Durante años he caminado nuestras comunidades con la convicción de que el bienestar de nuestra gente exige lealtad y trabajo de raíz. Ese mismo ideal me impulsó a ser fundadora de Morena y la primera Presidenta del Comité Ejecutivo Municipal. Mi historia es de congruencia; servir a nuestro municipio con honestidad siempre ha sido y será mi verdadera causa."
-            </h2>
-            <div class="divisor-dorado-centro"></div>
-            <p class="statement-firma">Judith Elizabeth Sánchez Luna</p>
-        </div>
-    </section>
-
-    <section class="ejes">
-        <div class="container">
-            <h2 class="seccion-titulo-oscura">Ejes de Acción</h2>
-            <div class="ejes-grid">
-                <div class="card-eje">
-                    <div class="icono-wrapper">
-                        <img src="img/icono-educacion.svg" alt="Educación" class="icono-eje">
-                    </div>
-                    <h3>Educación</h3>
-                    <p>Impulso a becas, mejoramiento de infraestructura escolar y vinculación académica para nuestros jóvenes.</p>
+    <!-- Sección Redes Sociales -->
+    <section class="social-feed-section">
+        <h2 class="section-title">Día a día seguimos trabajando por un mejor Marqués</h2>
+        <div class="feed-container">
+            <!-- Contenedor Facebook (Aquí puedes insertar el plugin de páginas de FB) -->
+            <div class="feed-box facebook-feed">
+                <div class="feed-placeholder">
+                    <i class="fa-brands fa-facebook" style="font-size: 3rem; color: #1877F2; margin-bottom: 15px;"></i>
+                    <p>Espacio para Widget de Facebook</p>
+                    <small>Inserta aquí el iframe de tu página</small>
                 </div>
-                <div class="card-eje">
-                    <div class="icono-wrapper">
-                        <img src="img/icono-bienestar.svg" alt="Bienestar Social" class="icono-eje">
-                    </div>
-                    <h3>Bienestar Social</h3>
-                    <p>Gestión permanente de programas de apoyo a la vivienda, desarrollo infantil y salud comunitaria.</p>
-                </div>
-                <div class="card-eje">
-                    <div class="icono-wrapper">
-                        <img src="img/icono-cultura.svg" alt="Cultura" class="icono-eje">
-                    </div>
-                    <h3>Defensa Cultural</h3>
-                    <p>Protección firme de nuestras zonas naturales y rescate de las tradiciones que nos dan identidad.</p>
+            </div>
+            <!-- Contenedor Instagram (Aquí puedes insertar el widget de IG) -->
+            <div class="feed-box instagram-feed">
+                <div class="feed-placeholder">
+                    <i class="fa-brands fa-instagram" style="font-size: 3rem; color: #E1306C; margin-bottom: 15px;"></i>
+                    <p>Espacio para Widget de Instagram</p>
+                    <small>Inserta aquí el iframe de tu cuenta</small>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="actividad">
-        <div class="container">
-            <div class="actividad-header">
-                <h2 class="seccion-titulo-oscura">Cercanía y Territorio</h2>
-                <p class="seccion-desc">Acompáñame en el día a día. El trabajo por nuestro municipio se hace en las calles, escuchando y gestionando de la mano con los ciudadanos.</p>
+    <!-- Sección Contacto y Formulario -->
+    <section id="contacto" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2 class="cursive-title">Hagamos equipo<br>por El Marqués</h2>
+                <div class="contact-details">
+                    <p><i class="fa-solid fa-location-dot"></i> Centro de Atención Municipal, Hacienda Jesús María, Edificio de regidores y regidoras</p>
+                    <p><i class="fa-solid fa-phone"></i> (442) 614 1762</p>
+                </div>
+                <!-- Reutilizamos FotoEli -->
+                <img src="FotoEli.png" alt="Eli Luna en oficina" class="contact-foto">
             </div>
             
-            <div class="fb-widget-container">
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FEliSanLuna&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden; max-width: 100%; border-radius: 4px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <section class="contacto-inicio">
-        <div class="container">
-            <div class="contacto-wrapper">
-                <h2 class="seccion-titulo-oscura" style="margin-bottom: 20px;">Escríbeme</h2>
-                <p class="seccion-desc" style="margin-bottom: 40px;">Tu voz es fundamental. Déjame tus datos y tu petición, y me pondré en contacto contigo a la brevedad.</p>
-                
-                <form action="https://formspree.io/f/TU_CODIGO_AQUI" method="POST" class="formulario-marca">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Nombre completo</label>
-                            <input type="text" name="nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Teléfono o Correo</label>
-                            <input type="text" name="contacto" required>
-                        </div>
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Andrés López" required>
+                    </div>
+                    <!-- Campo actualizado para correo o teléfono -->
+                    <div class="form-group">
+                        <label for="contacto-dato">Correo electrónico o Teléfono</label>
+                        <input type="text" id="contacto-dato" name="contacto-dato" placeholder="correo@gmail.com o 442 000 0000" required>
                     </div>
                     <div class="form-group">
-                        <label>Mensaje o Petición</label>
-                        <textarea name="mensaje" rows="4" required></textarea>
+                        <label for="mensaje">¿Cómo podemos apoyarte?</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos brevemente sobre tus necesidades..." required></textarea>
                     </div>
-                    <button type="submit" class="btn-principal btn-form">Enviar Mensaje</button>
+                    <!-- Botón con color institucional -->
+                    <button type="submit" class="btn-vino">Enviar mensaje</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container footer-content">
-            <div class="logo footer-logo">
-                <span class="logo-blanco">Eli</span><span class="logo-dorado">Luna</span>
-            </div>
-            <p>&copy; 2026 Judith Elizabeth Sánchez Luna. Regidora de El Marqués, Qro.</p>
+    <!-- Footer Universal -->
+    <footer class="site-footer">
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/JudithElizabethSanchezLuna" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook"></i> Judith Elizabeth Sánchez Luna
+            </a>
+            <a href="https://www.instagram.com/elizabeth_luna.s" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram"></i> @elizabeth_luna.s
+            </a>
         </div>
     </footer>
 
